@@ -1,5 +1,6 @@
 'use strict';
 
+const { strictEqual } = require('assert');
 // brings in the assert module for unit testing
 const assert = require('assert');
 // brings in the readline module to access the command line
@@ -11,11 +12,31 @@ const rl = readline.createInterface({
 });
 
 
-const pigLatin = (word) => {
-
-  // Your code here
-
+const pigLatin = (str) => {
+  str = str.trim('').toLowerCase();
+ 
+    let vowels = ["a", "e", "i", "o", "u"]  
+    
+    if (vowels.indexOf(str[0]) > -1) {
+      return str = str + "yay";
+    }
+   // words that start with one or more consonants
+   else {
+       for (let i = 0; i<str.length; i++){
+           if (vowels.indexOf(str[i]) > -1){
+               let firstCons = str.slice(0, i);
+               let middle = str.slice(i, str.length);
+               str = middle + firstCons + "ay";
+               break;
+              }
+            }
+    return str;
+  }
 }
+
+ 
+  
+  // Your code here
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
