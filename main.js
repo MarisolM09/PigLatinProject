@@ -26,7 +26,7 @@ const pigLatin = (str) => {
            if (vowels.indexOf(str[i]) > -1){
                let firstCons = str.slice(0, i);
                let middle = str.slice(i, str.length);
-               str = middle + firstCons + "ay";
+               str = middle.concat(firstCons) + "ay";
                break;
               }
             }
