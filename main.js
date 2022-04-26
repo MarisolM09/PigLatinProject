@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 
 const pigLatin = (str) => {
   str = str.trim('').toLowerCase();
- 
+  
     let vowels = ["a", "e", "i", "o", "u"]  
     
     if (vowels.indexOf(str[0]) > -1) {
@@ -33,8 +33,19 @@ const pigLatin = (str) => {
     return str;
   }
 }
-
  
+let input = document.querySelector('#user-input').addEventListener('input', );
+
+button.addEventListener("click", () => {
+  let ul = document.getElementById('Translated-PigLatinWord')
+  let li = document.createElement('li');
+  li.appendChild(document.createTextNode())
+  ul.appendChild(li)
+})
+
+
+
+
   
   // Your code here
 
